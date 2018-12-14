@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Hello Blocheads!</title>
 </head>
@@ -12,10 +12,18 @@
 
     <script type="text/babel">
        class Greeting extends React.Component {
+           constructor(props){
+           super(props);
+           this.state = {
+             number: 19876
+           }
+         }
          render() {
            return (
              <div>
-               <h1>React is cake</h1>
+               <h1>Hello, React is cake</h1>
+               <h1>Hello, {this.props.name}! React is cake</h1>
+               <h2>Student ID #: {this.state.number}</h2>
              </div>
            );
          }
@@ -23,6 +31,7 @@
  
        ReactDOM.render(
          <Greeting />, document.getElementById('app')
+         <Greeting name="React Student"/>, document.getElementById('app')
        );
 
    </script>
