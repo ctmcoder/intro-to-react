@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Hello Blocheads!</title>
-</head>
-<body>
-<div id="app"></div>
+  <head>
+    <title>My Second React app</title>
+  </head>
+  <body>
+
+    <div id="app"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
@@ -12,29 +13,26 @@
 
     <script type="text/babel">
        class Greeting extends React.Component {
-           constructor(props){
+          constructor(props){
            super(props);
            this.state = {
-             number: 19876
+             number: 2
            }
          }
+ 
          render() {
            return (
              <div>
-               <h1>Hello, React is cake</h1>
-               <h1>Hello, {this.props.name}! React is cake</h1>
-               <h2>Student ID #: {this.state.number}</h2>
+               <h1>Hello, {this.props.name}</h1>
+               <h2>Current project: {this.state.number}</h2>
              </div>
            );
          }
        }
  
        ReactDOM.render(
-         <Greeting />, document.getElementById('app')
-         <Greeting name="React Student"/>, document.getElementById('app')
+           <Greeting name="Welcome to React"/>, document.getElementById('app')
        );
-
-   </script>
-
-</body>
+    </script>
+  </body>
 </html>
